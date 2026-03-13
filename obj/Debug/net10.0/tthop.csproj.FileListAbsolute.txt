@@ -1,0 +1,14 @@
+/home/okno/tthop/bin/Debug/net10.0/tthop
+/home/okno/tthop/bin/Debug/net10.0/tthop.deps.json
+/home/okno/tthop/bin/Debug/net10.0/tthop.runtimeconfig.json
+/home/okno/tthop/bin/Debug/net10.0/tthop.dll
+/home/okno/tthop/bin/Debug/net10.0/tthop.pdb
+/home/okno/tthop/obj/Debug/net10.0/tthop.GeneratedMSBuildEditorConfig.editorconfig
+/home/okno/tthop/obj/Debug/net10.0/tthop.AssemblyInfoInputs.cache
+/home/okno/tthop/obj/Debug/net10.0/tthop.AssemblyInfo.cs
+/home/okno/tthop/obj/Debug/net10.0/tthop.csproj.CoreCompileInputs.cache
+/home/okno/tthop/obj/Debug/net10.0/tthop.dll
+/home/okno/tthop/obj/Debug/net10.0/refint/tthop.dll
+/home/okno/tthop/obj/Debug/net10.0/tthop.pdb
+/home/okno/tthop/obj/Debug/net10.0/tthop.genruntimeconfig.cache
+/home/okno/tthop/obj/Debug/net10.0/ref/tthop.dll
