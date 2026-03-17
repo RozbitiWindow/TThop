@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 
 class Program
@@ -17,8 +17,9 @@ class Program
             Console.WriteLine("\nProcesses: " + processCount);
             systemReader.getRam();
             Console.WriteLine("\n--- RAM   usage ---         --- Disk space ---");
-            Console.WriteLine("Total RAM: " + systemReader._totalRam / 1048576 + " GB             Total: " + drive.TotalSize / 1073741824 + " GB");
-            Console.WriteLine("Availible RAM: " + systemReader._avaibleRam / 1048576 + " GB         Free:  " + drive.AvailableFreeSpace / 1073741824 + " GB");
+            Console.WriteLine("    Total RAM: " + systemReader._totalRam / 1048576 + " GB         Total: " + drive.TotalSize / 1073741824 + " GB");
+            Console.Write("Availible RAM: " + systemReader._avaibleRam / 1048576 + " GB"); //budoucí color vizualizace
+            Console.WriteLine("          Free: " + drive.AvailableFreeSpace / 1073741824 + " GB");
             systemReader.getCpuLoad();
             Console.Write("\n--- CPU   load ---");
             Console.WriteLine("        --- System uptime ---");
@@ -33,19 +34,17 @@ class Program
             double uptimeSeconds = Math.Round(systemReader.getUptime());
             TimeSpan uptime = TimeSpan.FromSeconds(uptimeSeconds);
             Console.ResetColor();
-            Console.Write("                    " + uptime);
-            systemReader.getCpuTemp();
-            Console.WriteLine("\n\n--- CPU - temp ---");
-            Console.Write("CPU temp: " + systemReader._cpuTemp + " °C");
+            Console.Write("                    " + uptime + "\n\n--- Cpu temp ---\n\n");
+            var temps = systemReader.GetCpuAndGpuTemperatures();
+            foreach (var kv in temps)
+            {
+                Console.WriteLine($"{kv.Key}: {kv.Value:F2} °C");
+            }
+            Console.WriteLine("*sensor → GPU temp\n Tctl → CPU");
             if (systemReader._cpuTemp == -1) { Console.WriteLine(" - cant get system data (not suported)"); }
             else { Console.WriteLine(""); }
-            Thread.Sleep(1000);
-           /* while (i < 3)
-            {
-                Console.Write(".");
-                Thread.Sleep(1000);
-                i++;
-            }*/
+            Thread.Sleep(3000);
+
 
             continue;
         }
