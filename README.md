@@ -1,7 +1,6 @@
 <div align="center">
 
 # 🖥️ TThop
-api_key = "sadg54sdg465sdg54sdg654"
 
 **A lightweight, terminal-based system monitor for Linux — built with C# and .NET 10.**
 
