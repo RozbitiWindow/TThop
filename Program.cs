@@ -9,7 +9,8 @@ class Program
         {
             //int i = 0;
             SystemReader systemReader = new SystemReader();
-            DriveInfo drive = new DriveInfo("/");
+            long totalDisk = DriveInfo.GetDrives().Where(d => d.DriveType == DriveType.Fixed).Sum(d => d.TotalSize);
+            long freeDisk = DriveInfo.GetDrives().Where(d => d.DriveType == DriveType.Fixed).Sum(d => d.AvailableFreeSpace);
             Console.Clear();
             Console.WriteLine("TThop system stats by RozbitiOkno");
             int processCount = Directory.GetDirectories("/proc")
@@ -17,9 +18,9 @@ class Program
             Console.WriteLine("\nProcesses: " + processCount);
             systemReader.getRam();
             Console.WriteLine("\n--- RAM   usage ---         --- Disk space ---");
-            Console.WriteLine("    Total RAM: " + systemReader._totalRam / 1048576 + " GB         Total: " + drive.TotalSize / 1073741824 + " GB");
+            Console.WriteLine("    Total RAM: " + systemReader._totalRam / 1048576 + " GB         Total: " + totalDisk / 1073741824 + " GB");
             Console.Write("Availible RAM: " + systemReader._avaibleRam / 1048576 + " GB"); //budoucí color vizualizace
-            Console.WriteLine("          Free: " + drive.AvailableFreeSpace / 1073741824 + " GB");
+            Console.WriteLine("          Free: " + freeDisk / 1073741824 + " GB");
             systemReader.getCpuLoad();
             Console.Write("\n--- CPU   load ---");
             Console.WriteLine("        --- System uptime ---");

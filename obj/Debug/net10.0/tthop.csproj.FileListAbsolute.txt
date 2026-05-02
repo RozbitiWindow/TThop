@@ -12,3 +12,4 @@
 /home/okno/tthop/obj/Debug/net10.0/tthop.pdb
 /home/okno/tthop/obj/Debug/net10.0/tthop.genruntimeconfig.cache
 /home/okno/tthop/obj/Debug/net10.0/ref/tthop.dll
+/home/okno/TThop/obj/Debug/net10.0/tthop.sourcelink.json

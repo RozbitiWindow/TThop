@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/okno/tthop/tthop.csproj": {}
+    "/home/okno/TThop/tthop.csproj": {}
   },
   "projects": {
-    "/home/okno/tthop/tthop.csproj": {
+    "/home/okno/TThop/tthop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/okno/tthop/tthop.csproj",
+        "projectUniqueName": "/home/okno/TThop/tthop.csproj",
         "projectName": "tthop",
-        "projectPath": "/home/okno/tthop/tthop.csproj",
+        "projectPath": "/home/okno/TThop/tthop.csproj",
         "packagesPath": "/home/okno/.nuget/packages/",
-        "outputPath": "/home/okno/tthop/obj/",
+        "outputPath": "/home/okno/TThop/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/okno/.nuget/NuGet/NuGet.Config"
